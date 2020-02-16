@@ -1,7 +1,5 @@
-export default function UsersRoute(app, db) {
+export default function UsersRoute(app, path, config) {
     // work with one url, methods: GET, POST
-    const path = "/users";
-
     app.get(path, (req, res) => {
         res.send({ status: "ok" });
     });

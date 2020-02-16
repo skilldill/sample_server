@@ -1,6 +1,4 @@
-export default function(app, db) {
-    const path = "/";
-
+export default function(app, path, config) {
     app.get(path, (req, res) => {
         res.send({
             status: "ok",
