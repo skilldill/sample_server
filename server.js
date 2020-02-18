@@ -3,15 +3,14 @@ import express from "express";
 import mongoose, { Schema } from "mongoose";
 
 import routes from "./app/routes";
-import middlewares from "./app/middlewares";
+import middlewaresContainer from "./app/middlewares";
 
 // Settings app
 dotenv.config({});
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-middlewares(app);
-routes(app, {});
+middlewaresContainer(app)(routes, {});
 
 // Server start
 app.listen(PORT, () => {
