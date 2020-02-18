@@ -6,7 +6,7 @@ export default function UsersRoute(app, path, config) {
 
     app.post(path, (req, res) => {
         const user = req.body;
-        console.log("success add user");
+        console.log("success add user", user);
         res.json({ status: "added", user });
     });
 }
